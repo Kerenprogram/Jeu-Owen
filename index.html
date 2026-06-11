@@ -1,0 +1,323 @@
+html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Owen</title>
+    <style>
+        body {
+            background-image:url("Gamer.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: rgba(121, 58, 163, 0.959);
+            text-align: center;
+            font-family: Arial;
+        
+        }
+
+        button {
+            
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+
+
+        #fin{
+    display:none;
+    background-color: rgba(255,255,255,0.15);
+    width: 70%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    border: 4px solid gold;
+}
+#trophee{
+    font-size:120px;
+    margin-bottom:20px;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+
+.etoile{
+    position: fixed;
+    z-index: 9999;
+    top: -50px;
+    font-size: 30px;
+    animation: chute 5s linear infinite;
+    pointer-events: none;
+}
+
+.etoile1 { left: 10%; }
+.etoile2 { left: 30%; animation-delay: 1s; }
+.etoile3 { left: 50%; animation-delay: 2s; }
+.etoile4 { left: 70%; animation-delay: 3s; }
+.etoile5 { left: 90%; animation-delay: 4s; }
+
+@keyframes chute {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+        </style>
+</head>
+
+
+<body>
+    
+          
+    
+<div id="accueil">
+<h1>Mission Owen</h1>
+    <p>Es-tu prêt à relever les defis ?</p>
+
+    <button onclick="commencer()">Commencer la mission</button>
+</div>
+
+<div id="defi1" style="display:none;">
+    <h2>Défi 1 : Défi gamer</h2>
+    <p>Quel jeu est sorti en premier ?.</p>
+    <button onclick="mauvaiseReponse()">Minecraft</button>
+
+    <button onclick="bonneReponse()"> Roblox</button>
+
+    <button onclick="mauvaiseReponse()"> Fortnite</button>
+</div>
+
+<div id="defi2" style="display:none;">
+    <h2>Défi 2 : Défi Tiakola</h2>
+    <p>Quel artiste Owen écoute le plus ?</p>
+
+    <button onclick="mauvaiseTiakola()"> Michael Jackson</button>
+
+    <button onclick="reussirTiakola()"> Tiakola</button>
+
+    <button onclick="mauvaiseTiakola()"> Tchoupi !</button>
+</div>
+
+<div id="defi3" style="display:none;">
+    <h2>Défi 3 : Défi Basket</h2>
+    <p>Combien vaut un tir à trois points ?</p>
+
+    <button onclick="mauvaiseBasket()"> 48</button>
+
+    <button onclick="reussirBasket()"> 3</button>
+
+    <button onclick="mauvaiseBasket()"> 2</button>
+</div>
+
+<div id="defi4" style="display:none;">
+
+    <h2> ✨Défi Keren ✨</h2>
+
+    <p>Quel est le mot préféré de Keren quand elle est heureuse ?</p>
+
+    <button onclick="bonneReponseKeren()">
+        MDRRRR
+    </button>
+
+    <button onclick="mauvaiseReponseKeren()">
+        Salutations distinguées
+    </button>
+
+    <button onclick="mauvaiseReponseKeren()">
+        LOLLLL
+    </button>
+
+    <button onclick="mauvaiseReponseKeren()">
+        Je t'aimeeee
+    </button>
+
+</div>
+  
+
+<div id="fin" style="display:none;">
+
+    <div id="trophee">
+🏆
+</div>
+
+    <h1>🏆 CERTIFICAT OFFICIEL 🏆</h1>
+
+    <h2>OWEN</h2>
+
+    <p>
+        Félicitations !
+    </p>
+
+    <p>
+        Tu as terminé avec succès
+        la Mission Owen.
+    </p>
+
+    <br>
+
+    <p>🎮 Gamer confirmé</p>
+
+    <p>🎵 Fan officiel de Tiakola</p>
+
+    <p>🏀 Basketteur certifié</p>
+
+    <p>✨ Connaisseur de Keren</p>
+
+    <br>
+
+    <h2>✨ NIVEAU : LÉGENDAIRE ✨</h2>
+
+    <p>
+        Récompense débloquée : Respect éternel 😎
+    </p>
+
+    <p>
+👑 Rang obtenu : LE GOAT 👑
+</p>
+<button onclick="alert('🎁 Récompense secrète : Tu dois chanter Pineapple de leto à Keren en vocal.')">
+    🎁 Réclamer la récompense secrète
+</button>
+
+<button onclick="ouvrirLettre()">
+    💌 Message secret
+</button>
+
+</div>
+
+<div id="lettre" style="display:none;">
+
+    <h1>💌 Lettre pour Owen 💌</h1>
+   <p>Pour Owen,</p> 
+   <p>Coucou ! Si tu lis ça, c'est que tu es un vrai fan de Keren !😎 De Tiakola et de jeux vidéo aussi, t'inquiète.</p>
+   <p>Je voulais te remercier d'avoir jouer à ce mini jeu, parce que j'y ai mis mon temps. Je me suis beaucoup amusée à le créer, et 
+j'espère qu'il t'as fait sourire au moins une fois ( et qu'il t'as embrouiller mdrr !)</p>
+
+<p>Programmer ce jeu pour toi, c'était ma façon de te montrer que je te considère comme un vrai ami (même  si je te laisse quelques remis et que je
+    réponds des fois un peu plus froidement que je ne le voudrais, désolée.)</p>
+
+   <p>Bon, maintenant va dormir, tu as une mission à accomplir demain : faire rire Keren !</p>
+
+   <p>Bref, bisouuus</p>
+
+   <p>— Keren 🎮🏀🎵❤️</p>
+</div>
+
+<script>
+        function commencer() {
+            alert("Prépare toi pour le défi !");
+
+    document.getElementById("accueil").style.display = "none";
+
+    document.getElementById("defi1").style.display = "block";
+
+}
+
+function bonneReponse() {
+
+    alert("🎉 Bravo Owen ! +100 XP Gamer");
+
+    document.getElementById("defi1").style.display = "none";
+
+    document.getElementById("defi2").style.display = "block";
+
+    document.body.style.backgroundImage =
+    "url('Tiakola.jpeg')";
+}
+
+
+function mauvaiseReponse() {
+
+    alert("❌ Mauvaise réponse ! Réfléchis un peu !");
+
+}
+
+    function reussirTiakola(){
+
+    alert("🎵 Exact ! T'as un cerveau Owen !");
+
+    document.getElementById("defi2").style.display = "none";
+
+    document.getElementById("defi3").style.display = "block";
+
+    document.body.style.backgroundImage =
+    "url('Basket.jpeg')";
+}
+function mauvaiseTiakola() {
+    alert("❌ Mauvaise réponse ! Ton cerveau marche ?");
+}
+
+function mauvaiseBasket() {
+    alert("❌ Mauvaise réponse ! Tu ne connais pas les règles du basket ?");
+}
+
+function reussirBasket(){
+
+    alert("🏀 Parfait ! Tu es un vrai fan de basket !");
+
+    document.getElementById("defi3").style.display = "none";
+
+    document.getElementById("defi4").style.display = "block";
+    document.body.style.backgroundImage =
+    "url('Lana.jpeg')";
+}
+function mauvaiseReponseKeren(){
+
+    alert("❌ Mauvaise réponse ! Je suis vexée.");
+}
+
+function bonneReponseKeren(){
+
+    alert("🎉 Exact ! Keren est incapable de vivre sans dire MDRRRR.");
+
+    document.getElementById("defi4").style.display = "none";
+
+    document.getElementById("fin").style.display = "block";
+
+    document.getElementById("etoiles").style.display = "block";
+
+    document.body.style.backgroundImage =
+    "url('gold.jpeg')";
+}
+
+function ouvrirLettre(){
+
+    document.getElementById("lettre").style.display = "block";
+}
+     </script>
+
+     <div id="etoiles" style="display:none;">
+
+    <div class="etoile etoile1">⭐</div>
+    <div class="etoile etoile2">⭐</div>
+    <div class="etoile etoile3">⭐</div>
+    <div class="etoile etoile4">⭐</div>
+    <div class="etoile etoile5">⭐</div>
+
+</div>
+
+</body>
+
+</html>
